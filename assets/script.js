@@ -26,6 +26,7 @@ $('#searchBtn').on("click", function(e) {
 
     $("#searchResults").append(newDiv)
 
+
   var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchedFor + "&appid=" + API + "&units=imperial";
 
 
@@ -57,7 +58,7 @@ $('#searchBtn').on("click", function(e) {
         $(dateEl).text(time);
         $(iconEl).attr('src', iconurl);
         $(tempEl).text(data.main.temp + " F");
-        $(windEl).text(data.wind.speed + " mph");
+        $(windEl).text(data.wind.speed + " MPH");
         $(humidEl).text(data.main.humidity + "%");
 
     let lat = data.coord.lat;
@@ -118,9 +119,9 @@ $('#searchBtn').on("click", function(e) {
         <ul class="list-unstyled">
           <li>${date}</li>
           <li class="weather-icon"><img src="${iconlink}"></li>
-          <li>Temp: ${temp}</li>
-          <li>Wind: ${wind}</li>
-          <li>Humidity: ${humid}</li>
+          <li>Temp: ${temp} &#8457</li>
+          <li>Wind: ${wind} MPH</li>
+          <li>Humidity: ${humid} %</li>
         </ul>
       </div>
       `;
