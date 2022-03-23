@@ -16,3 +16,4 @@ The purpose of this activity is to develop a weather application which utilizes 
 
 ## Mock-Up
 
+![C9072C3A-EDCF-4C0D-B6CB-DF1F9BC40C41](https://user-images.githubusercontent.com/94868925/159784016-bdcb5791-820e-45dc-bfd4-61372a34027d.png)
