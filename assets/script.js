@@ -24,7 +24,7 @@ $('#searchBtn').on("click", function(e) {
     
     // create a new event handler
 
-    $("#searchResults").append(newDiv)
+    $("#searchResults").append(newDiv)  
 
 
   var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchedFor + "&appid=" + API + "&units=imperial";
@@ -104,6 +104,8 @@ $('#searchBtn').on("click", function(e) {
       fiveDayForecast(data);
     
     function fiveDayForecast(data) {
+      
+      $('#5DayForecast').html('');
 
     for (let i = 0; i < 5; i++) {
       let date = data.list[i*8].dt_txt;
@@ -127,6 +129,7 @@ $('#searchBtn').on("click", function(e) {
       `;
 
       $('#5DayForecast').append(fiveDay);
+    
     }
     };
     })
