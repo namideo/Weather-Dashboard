@@ -27,7 +27,7 @@ $('#searchBtn').on("click", function(e) {
     $("#searchResults").append(newDiv)  
 
 
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchedFor + "&appid=" + API + "&units=imperial";
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchedFor + "&appid=" + API + "&units=imperial";
 
 
   fetch(queryURL)
@@ -52,7 +52,7 @@ $('#searchBtn').on("click", function(e) {
   function currentCity(data) {
 
     var icon = data.weather[0].icon;
-    var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
+    var iconurl = "https://openweathermap.org/img/w/" + icon + ".png";
 
         $(city).text(data.name);
         $(dateEl).text(time);
@@ -110,7 +110,7 @@ $('#searchBtn').on("click", function(e) {
     for (let i = 0; i < 5; i++) {
       let date = data.list[i*8].dt_txt;
       let fivedayicon = data.list[i*8].weather[0].icon;
-      let iconlink = "http://openweathermap.org/img/w/" + fivedayicon + ".png";
+      let iconlink = "https://openweathermap.org/img/w/" + fivedayicon + ".png";
       let temp = data.list[i*8].main.temp;
       let wind = data.list[i*8].wind.speed;
       let humid = data.list[i*8].main.humidity;
